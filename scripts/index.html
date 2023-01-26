@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <title>Expense Tracker</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--normalize CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>Expense Tracker <i class="fa-solid fa-coins"></i></h1>
+
+      <!--balance amount container  -->
+      <div class="balance-container">
+        <h2 class="balance-title">Your Balance :</h2>
+        <h3 class="balance amount-zero" id="balance">₹0.00</h3>
+      </div>
+
+      <!-- income & expense container -->
+      <div class="output-container">
+        <div class="income-container">
+          <h2 class="income">INCOME</h2>
+          <h3 class="income-amt amount-zero" id="income-amt">₹0.00</h3>
+        </div>
+        <div class="expense-container">
+          <h2 class="expense">EXPENSE</h2>
+          <h3 class="expense-amt amount-zero" id="expense-amt">₹0.00</h3>
+        </div>
+      </div>
+
+      <!-- history container -->
+      <div class="history-container">
+        <h2 class="history-title">History</h2>
+        <ul class="lists" id="lists">
+          <li class="minus">
+            <span>Cash</span> <span> -500</span>
+            <button class="update-btn btn">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="delete-btn btn">X</button>
+          </li>
+
+          <li class="plus">
+            <span>Cash</span> <span> 1000</span
+            ><button class="update-btn btn">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="delete-btn btn">X</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- form input container -->
+      <h2 class="input-title">Add New Transaction</h2>
+      <form class="input-container" id="form">
+        <!-- radio -->
+
+        <div class="radio-container" id="radio-container">
+          <div class="income-radio">
+            <input
+              type="radio"
+              name="amount"
+              id="income-radio"
+              value="inc"
+              checked
+            />
+            <label for="income-radio" class="income-radio">Income</label>
+          </div>
+          <div class="expense-radio">
+            <input type="radio" name="amount" id="expense-radio" value="exp" />
+            <label for="expense-radio" class="expense-radio">Expense</label>
+          </div>
+        </div>
+
+        <label for="transaction">Transaction</label>
+        <input
+          type="text"
+          id="transaction"
+          placeholder="Enter Transaction..."
+          name="rents"
+          required
+        />
+        <label for="amount-input">Amount</label>
+        <input
+          type="number"
+          id="amount-input"
+          placeholder="Enter Amount (₹)"
+          name="money"
+          required
+        />
+
+        <button class="button" id="btn">Add Transaction</button>
+      </form>
+
+      <!-- social icons -->
+      <div class="social-icon hidden" id="socil-media">
+        <a href="https://github.com/harisvj144"
+          ><i class="fa-brands fa-github social"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/mohammed-haris-469685263"
+          ><i class="fa-brands fa-linkedin social"></i
+        ></a>
+        <a href="https://instagram.com/_haris_vj_?igshid=ZDdkNTZiNTM=">
+          <i class="fa-brands fa-instagram social"></i
+        ></a>
+      </div>
+    </main>
+    <!-- Custom JavaScript -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
